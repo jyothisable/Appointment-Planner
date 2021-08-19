@@ -6,7 +6,8 @@ export const Tile = ({ tile }) => {
       {Object.values(tile).map((value, index) => (
         <p 
         key={index} 
-        className={`${index === 0 ? "tile-title" : ""} tile`}>
+        className={`${index === 0 ? "tile-title" : ""} tile`}
+        >
         {value}
         </p>
       ))}
