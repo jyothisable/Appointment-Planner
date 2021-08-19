@@ -4,15 +4,15 @@ import { TileList } from "../../components/tileList/TileList";
 
 export const AppointmentsPage = ({ appointments, addAppointment, contacts }) => {
   const [title, setTitle] = useState("");
-  const [contact, setContact] = useState("");
+  const [contactName, setContactName] = useState("");
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addAppointment(title, contact, date, time);
+    addAppointment(title, contactName, date, time);
     setTitle("");
-    setContact("");
+    setContactName("");
     setDate("");
     setTime("");
   };
@@ -25,8 +25,8 @@ export const AppointmentsPage = ({ appointments, addAppointment, contacts }) => 
           contacts={contacts}
           title={title}
           setTitle={setTitle}
-          contact={contact}
-          setContact={setContact}
+          contactName={contactName}
+          setContact={setContactName}
           date={date}
           setDate={setDate}
           time={time}
