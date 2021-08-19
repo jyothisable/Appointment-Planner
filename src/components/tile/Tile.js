@@ -1,5 +1,5 @@
 import React from "react";
-// revieve tile and just display it 
+// receive tile and just display it 
 export const Tile = ({ tile }) => {
   return (
     <div className="tile-container">

@@ -22,6 +22,7 @@ export const AppointmentForm = ({
       .split("/");
     return `${day.padStart(2, "0")}-${month.padStart(2, "0")}-${year}`;
   };
+  console.log(getTodayString())
 
   // contactNames from contacts (contacts -> contact -> name)
   const contactNames= contacts.map(contact => contact.name);
@@ -41,6 +42,7 @@ export const AppointmentForm = ({
       />
       <input
         type="date"
+        dateFormat="dd/MM/yyyy"
         min={getTodayString()}
         value={date}
         onChange={(e) => setDate(e.target.value)}

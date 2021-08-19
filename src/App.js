@@ -9,19 +9,29 @@ Naming convention
 contacts => list of contact objects with name, phone and email
 contact => object containing name, phone and email
 addContact => function to adding contact object to contacts
-similary for appointments, appointment and addAppointment
+similarly for appointments, appointment and addAppointment
 */
 function App() {
 
   const [contacts,setContacts] = useState([
     {name: "John", phone:"9876543210",email: "john@gmail.com"},
-    {name: "John2", phone:"9876343210",email: "joh2n@gmail.com"},
+    {name: "John Jr", phone:"9876343210",email: "johnjr@gmail.com"},
   ])
 
-  const [appointments,setAppointments] = useState([
-    {title:"meeting",contactName: "John",date: "today",time: "now"},
-    {title:"party",contactName: "John2",date: "tom",time: "time1"},
-  ])
+  const [appointments, setAppointments] = useState([
+    {
+      title: "meeting",
+      contactName: "John",
+      date: "2021-12-31",
+      time: "20:00",
+    },
+    {
+      title: "party",
+      contactName: "John Jr",
+      date: "2021-12-31",
+      time: "23:00",
+    },
+  ]);
 
   const ROUTES = {
     CONTACTS: "/contacts",
