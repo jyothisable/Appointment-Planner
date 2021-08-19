@@ -1,2 +1,2 @@
 # Appointment Planner
-## Demo : https://appointment-planner-jyothisable.netlify.app/contact
+## Demo : https://appointment-planner-jyothisable.netlify.app
