@@ -19,7 +19,7 @@ export const ContactsPage = ({contacts,addContact}) => {
     }
 
   };
-  
+
   useEffect(() => {
     setIsDuplicate(contacts.find((contact) => contact.name === name));
   }, [name, contacts]);

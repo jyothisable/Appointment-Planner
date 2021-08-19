@@ -21,7 +21,7 @@ export const ContactForm = ({
       />
       <p>Phone:</p>
       <input
-        type="text"
+        type="tel"
         value={phone}
         onChange={(e) => setPhone(e.target.value)}
         pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$"
@@ -30,9 +30,9 @@ export const ContactForm = ({
       />
       <p>Email:</p>
       <input
-        type="tel"
+        type="email"
         value={email}
-        onchange={(e) => setEmail(e.target.value)}
+        onChange={(e) => setEmail(e.target.value)}
         required
         placeholder="Contact Email"
       />
