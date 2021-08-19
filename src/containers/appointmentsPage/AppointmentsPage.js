@@ -26,7 +26,7 @@ export const AppointmentsPage = ({ appointments, addAppointment, contacts }) => 
           title={title}
           setTitle={setTitle}
           contactName={contactName}
-          setContact={setContactName}
+          setContactName={setContactName}
           date={date}
           setDate={setDate}
           time={time}

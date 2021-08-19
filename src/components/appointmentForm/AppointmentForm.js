@@ -1,13 +1,16 @@
 import React from "react";
 
 import { ContactPicker } from "../contactPicker/ContactPicker";
-
+/*
+contactName => name value from contact (contacts -> contact -> name)
+contactNames => list of all contactName
+*/
 export const AppointmentForm = ({
   contacts,
   title,
   setTitle,
-  contact,
-  setContact,
+  contactName,
+  setContactName,
   date,
   setDate,
   time,
@@ -21,8 +24,9 @@ export const AppointmentForm = ({
     return `${day.padStart(2, "0")}-${month.padStart(2, "0")}-${year}`;
   };
 
-  const getContactNames = () => contacts.map((contact) => contact.name);
-
+  // contactNames from contacts (contacts -> contact -> name)
+  const contactNames= contacts.map(contact => contact.name);
+  
   return (
     <form onSubmit={handleSubmit}>
       <p>Name:</p>
@@ -34,10 +38,8 @@ export const AppointmentForm = ({
         placeholder="Appointment Title"
       />
       <ContactPicker
-        value={contact}
-        contacts={getContactNames()}
-        onChange={(e) => setContact(e.target.value)}
-        placeholder="Appointment With"
+        contactNames={contactNames}
+        handleChange={(e) => setContactName(e.target.value)}
       />
       <input
         type="date"
