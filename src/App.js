@@ -22,19 +22,11 @@ function App() {
   };
 
   const addContact = contact => {
-    setContacts(prev =>{
-      return prev.includes(contact) 
-      ? alert("contact already exists") 
-      : [contact,...prev]
-    })
+    setContacts(prev =>[contact,...prev])
   }
 
   const addAppointment = (appointment) => {
-    setAppointments((prev) => {
-      return prev.includes(appointment)
-        ? alert("appointment already exists")
-        : [appointment, ...prev];
-    });
+    setAppointments((prev) => [appointment, ...prev]);
   };
 
 
@@ -63,6 +55,7 @@ function App() {
             <AppointmentsPage 
             appointments = {appointments}
             addAppointment = {addAppointment}
+            contacts = {contacts}
             />
           </Route>
         </Switch>
