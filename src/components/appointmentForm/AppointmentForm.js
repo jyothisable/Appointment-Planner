@@ -9,7 +9,6 @@ export const AppointmentForm = ({
   contacts,
   title,
   setTitle,
-  contactName,
   setContactName,
   date,
   setDate,
@@ -26,7 +25,7 @@ export const AppointmentForm = ({
 
   // contactNames from contacts (contacts -> contact -> name)
   const contactNames= contacts.map(contact => contact.name);
-  
+
   return (
     <form onSubmit={handleSubmit}>
       <p>Name:</p>

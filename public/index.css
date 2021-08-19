@@ -1,5 +1,7 @@
 #root {
   padding: 30px;
+  width:max(50vw,380px);
+  margin:0 auto;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -30,8 +32,6 @@ h2 {
   margin-bottom: 18px;
 }
 
-section {
-}
 
 hr {
   border: none;

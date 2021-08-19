@@ -8,7 +8,7 @@ import { ContactsPage } from "./containers/contactsPage/ContactsPage";
 Naming convention
 contacts => list of contact objects with name, phone and email
 contact => object containing name, phone and email
-addContact => adding contact object to contacts
+addContact => function to adding contact object to contacts
 similary for appointments, appointment and addAppointment
 */
 function App() {
