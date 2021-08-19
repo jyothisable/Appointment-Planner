@@ -4,6 +4,13 @@ import { Switch, Route, Redirect, NavLink } from "react-router-dom";
 import { AppointmentsPage } from "./containers/appointmentsPage/AppointmentsPage";
 import { ContactsPage } from "./containers/contactsPage/ContactsPage";
 
+/*
+Naming convention
+contacts => list of contact objects with name, phone and email
+contact => object containing name, phone and email
+addContact => adding contact object to contacts
+similary for appointments, appointment and addAppointment
+*/
 function App() {
 
   const [contacts,setContacts] = useState([
@@ -12,8 +19,8 @@ function App() {
   ])
 
   const [appointments,setAppointments] = useState([
-    {title:"meeting",contact: "John",date: "today",time: "now"},
-    {title:"party",contact: "John2",date: "tom",time: "time1"},
+    {title:"meeting",contactName: "John",date: "today",time: "now"},
+    {title:"party",contactName: "John2",date: "tom",time: "time1"},
   ])
 
   const ROUTES = {
